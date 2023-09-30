@@ -1,0 +1,38 @@
+var, let, const 
+    =>it use to create variable in javascript.
+    =>we can create using 3 ways
+        using -
+            var - it was used till 2015
+            let - it came in 2015 with ECMA6
+            const - it came in 2015 with ECMA6
+
+    ------value Change-------------------------------
+        1. if variable defined using 
+            ->var the value can change
+            ->let the value can change
+            ->const the value will never change
+
+    ------re-define with same name-------------------
+        1. the variable already defined using 
+            ->var can re-define
+                var a = 100;
+                var a = 500; // possible 
+            ->let can not re-define
+                let x = 100;
+                let x = 500;  // error
+            ->const can not re-define
+                const a = 100;
+                const a = 300; // error 
+
+    ------scope of variable--------------------------
+        1. the variable defined inside
+            if(100>50){
+                var a = 100;
+                let b = 200;
+                const c = 300;
+                console.log(a, b, c); // 100 200 300
+            }
+            console.log(a); // 100
+            console.log(b); // error
+            console.log(c);// error
+        Note - var has global scope where let and const has block level scope
